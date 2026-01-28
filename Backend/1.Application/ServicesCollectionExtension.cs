@@ -1,4 +1,9 @@
 using System.Text;
+using _1.Application.Interfaces.ContentInterfaces;
+using _1.Application.Interfaces.GenreInterfaces;
+using _1.Application.Interfaces.SeriesInterfaces;
+using _1.Application.Interfaces.WatchHistoryInterfaces;
+using _1.Application.Services;
 using _1.Application.Services.AuthServices;
 using _1.Application.Services.HashingServices;
 using _1.Application.Services.TokenServices;
@@ -54,7 +59,11 @@ public static class ServicesCollectionExtension
         services.AddScoped<BCryptService>();
         services.AddScoped<CreateToken>();
         services.AddScoped<AuthService>();
-        services.AddScoped<UserService>();  
+        services.AddScoped<UserService>(); 
+        services.AddScoped<IContentService,ContentService>();  
+        services.AddScoped<IGenreService, GenreService>();  
+        services.AddScoped<ISeriesService, SeriesService>();  
+        services.AddScoped<IWatchHistoryService, WatchHistoryService>();  
         return services;
     }
     

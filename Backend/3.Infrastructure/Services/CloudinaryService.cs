@@ -1,5 +1,5 @@
 using _1.Application.DTOs.CloudinaryDtos;
-using _1.Application.Interfaces.ImageInterfaces;
+using _1.Application.Interfaces.CloudinaryInterfaces;
 using CloudinaryDotNet;
 using CloudinaryDotNet.Actions;
 using Microsoft.AspNetCore.Http;

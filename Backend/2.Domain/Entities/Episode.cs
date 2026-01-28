@@ -8,7 +8,7 @@ public class Episode
     public int EpisodeNumber { get; set; }
     public string Title { get; set; } = null!;
     public string Description { get; set; } = null!;
-    public int DurationInSeconds { get; set; }
+    public int? DurationInSeconds { get; set; }
     public string VideoUrl { get; set; } = null!;
     public string VideoPublicId { get; set; } = null!;
 }
